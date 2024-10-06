@@ -1,8 +1,17 @@
 {
-  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
-  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*"],
   "compilerOptions": {
-    "composite": true,
-    "types": ["electron-vite/node"]
-  }
+    "target": "ES2015",
+    "module": "CommonJS",
+    "lib": ["DOM", "ES2015", "ES2016", "ES2017"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*"]
 }
